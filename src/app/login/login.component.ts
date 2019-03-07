@@ -19,15 +19,14 @@ export class LoginComponent implements OnInit {
     this.checkUser();
   }
 
-    //when someone press the login button and calls the service funtion- login() with the parameter username
+    //when someone press the login button and calls the service funtion- login() with the parameter username and lenght control and regex match to see that the user includes a number
     login():void {
-      if (this.username.length > 10 && this.username.match(/[a-zA-ZåäöÅÄÖ0-9]?\d/)) {
+      if (this.username.length >= 10 && this.username.match(/\d/)) {
         this.authService.login(this.username)
         this.router.navigateByUrl('/dashboard');
       } else {
         alert("you ned at least 10 characters including a number");
       }
-
     }
 
     //when someone press the logout button and calls the service funtion- logout() with the parameter and calls the checkUser

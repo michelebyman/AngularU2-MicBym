@@ -7,7 +7,6 @@ import { AuthService } from './auth.service';
 })
 export class RouteguardService implements CanActivate {
 
-authorized: boolean;
 user: string;
 
 constructor(private authService: AuthService, public router: Router) {
@@ -20,11 +19,8 @@ constructor(private authService: AuthService, public router: Router) {
     this.user = this.authService.checkIfLoggedIn();
     if (this.user === null || this.user === undefined ) {
       this.router.navigate(['login']);
-      this.authorized = false;
-      return this.authorized;
-    } else {
-      this.authorized = true;
-      return this.authorized;
+      return false;
+    }
+      return true;
     }
   }
-}
