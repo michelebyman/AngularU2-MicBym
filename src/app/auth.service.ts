@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-
+ // handle loging service and logout service
 @Injectable({
   providedIn: 'root'
 })
 
   export class AuthService {
+
   loggedUser:string;
   constructor() {
   }

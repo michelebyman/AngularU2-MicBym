@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-
+import { RouteguardService } from '../routeguard.service';
+  // showes the navbar
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public routeGuard: RouteguardService) { }
 
   ngOnInit() {
   }

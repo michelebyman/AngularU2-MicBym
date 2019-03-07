@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-
+//handle users in the userlist and checks if user is authorized or not
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
