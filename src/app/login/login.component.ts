@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     // calls the function
-    this.checkUser();
+    console.log(this.checkUser());
   }
 
     //when someone press the login button and calls the service funtion- login() with the parameter username and lenght control and regex match to see that the user includes a number
