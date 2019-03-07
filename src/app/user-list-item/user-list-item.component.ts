@@ -8,9 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class UserListItemComponent implements OnInit {
   // recives a user from userList
-  @Input() user:string;
+  @Input() user: string;
   // recives a color from userList
-  @Input() changeColor:boolean;
+  @Input() changeColor: boolean;
 
   constructor() { }
 

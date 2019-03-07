@@ -10,13 +10,17 @@ import {
 
 // sets paths to different companents and sets routeguards 
 const routes: Routes = [
-    {path: 'dashboard', component: DashboardComponent, canActivate: [RouteGuard]},
-    {path: '', component: LoginComponent},
-    {path: 'login', component: LoginComponent},
-    {path: 'user/:id', component: SingleUSerComponent,
+  {
+    path: 'dashboard', component: DashboardComponent,
+    canActivate: [RouteGuard]
+  },
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'user/:id', component: SingleUSerComponent,
     canActivate: [RouteGuard],
-    },
-    {path: '**', component: PageNotFoundComponent}
+  },
+  { path: '**', component: PageNotFoundComponent }
 
 ];
 

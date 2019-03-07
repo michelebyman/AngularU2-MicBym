@@ -8,29 +8,29 @@ import { AuthService } from '../auth.service';
 })
 export class DashboardComponent implements OnInit {
   //creating a property as an Array passing in a string
-  userList:string[] = ["Users should be added or removed"];
+  userList: string[] = ["Users should be added or removed"];
   user: string;
 
   constructor(private authService: AuthService) {
     // runs the method
     this.checkUser();
-   }
+  }
 
   ngOnInit() {
   }
 
   // checks the user and sets this.user to the same value we have in the local storage
-  checkUser():void{
+  checkUser(): void {
     this.user = this.authService.checkIfLoggedIn();
   }
 
 
- //recives parameter from edit-users.componet.ts(@Output addUser: new EventEmitter) through the dashboard.component.html where we add (addUser)="onAddUser($event) then Adds user to userList[]
-  onAddUser(user:string):void{
+  //recives parameter from edit-users.componet.ts(@Output addUser: new EventEmitter) through the dashboard.component.html where we add (addUser)="onAddUser($event) then Adds user to userList[]
+  onAddUser(user: string): void {
     this.userList.push(user);
   }
   //removes user from userList[] but not the last one
-  onRemoveUser():void{
+  onRemoveUser(): void {
     if (this.userList.length > 1) {
       this.userList.pop();
     }

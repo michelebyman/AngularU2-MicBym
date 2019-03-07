@@ -2,14 +2,16 @@
   width: 300px;
 }
 
-.wrapper, .styleWrapper  {
+.wrapper,
+.styleWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.styleLogout, .wrapper {
+.styleLogout,
+.wrapper {
   width: 40%;
   background-color: grey;
   padding: 60px;
