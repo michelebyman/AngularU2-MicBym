@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 //Displays a user if someone clicks on the list-item in dashboard and change the url/path
 @Component({
   selector: 'app-single-user',

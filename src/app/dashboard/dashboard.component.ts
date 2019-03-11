@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-//handle users in the userlist and checks if user is authorized or not
+//handle users in the userList and checks if user is authorized or not
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   }
 
 
-  //recives parameter from edit-users.componet.ts(@Output addUser: new EventEmitter) through the dashboard.component.html where we add (addUser)="onAddUser($event) then Adds user to userList[]
+  //receives parameter from edit-users.component.ts(@Output addUser: new EventEmitter) through the dashboard.component.html where we add (addUser)="onAddUser($event) then Adds user to userList[]
   onAddUser(user: string): void {
     this.userList.push(user);
   }

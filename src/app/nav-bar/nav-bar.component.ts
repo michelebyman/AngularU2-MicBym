@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-// showes the navbar
+// shows the navbar
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',

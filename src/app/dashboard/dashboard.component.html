@@ -7,7 +7,7 @@
 
   <!-- checks if there is a user or not (*ngIf) -->
   <div class="wrapper-row" *ngIf="user">
-    <!--Adding child to dashboard and using @Input[] and @Output() to be able to send and recive data from the childs   -->
+    <!--Adding child to dashboard and using @Input[] and @Output() to be able to send and receive data from the child   -->
     <app-user-list [users]="userList"></app-user-list>
 
     <app-edit-users [userL]="userList" (addUser)="onAddUser($event)" (removeUser)="onRemoveUser($event)"></app-edit-users>

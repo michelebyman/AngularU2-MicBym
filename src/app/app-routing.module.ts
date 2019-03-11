@@ -8,7 +8,7 @@ import {
   RouteguardService as RouteGuard
 } from './routeguard.service';
 
-// sets paths to different companents and sets routeguards 
+// sets paths to different components and sets route-guards, the paths are shown in the url 
 const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
